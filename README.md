@@ -12,7 +12,7 @@ Require it in your config:
 local config = {
   --...
   error = {
-    ['lusty-error.error'] = {
+    ['lusty-error.error.status'] = {
       prefix = {{'input'}},
       status = {
         500 = {{'request:500'}},
