@@ -1,8 +1,8 @@
 package = "lusty-error-status"
-version = "0.1-0"
+version = "0.2-0"
 source = {
-  url = "https://github.com/Olivine-Labs/lusty-error-status/archive/v0.1.tar.gz",
-  dir = "lusty-error-status-0.1"
+  url = "https://github.com/Olivine-Labs/lusty-error-status/archive/v0.2.tar.gz",
+  dir = "lusty-error-status-0.2"
 }
 description = {
   summary = "error handling by status code.",
@@ -14,7 +14,7 @@ description = {
 }
 dependencies = {
   "lua >= 5.1",
-  "lusty >= 0.1-0",
+  "lusty >= 0.2-0",
   "busted >= 1.7-1"
 }
 build = {
