@@ -27,10 +27,6 @@ return {
 
     local code = context.response.status
 
-    if context.error then
-      code = 500
-    end
-
     local statusCode = status[code] or status[code/100%10]
     for i=1, #prefix do
       context.lusty:publish({unpack(prefix[i])}, context)
@@ -41,6 +37,7 @@ return {
     for i=1, #suffix do
       context.lusty:publish({unpack(suffix[i])}, context)
     end
+    context.output = nil 
   end,
 
   options = {
