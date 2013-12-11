@@ -1,5 +1,5 @@
 package = "lusty-error-status"
-version = "0.2-0"
+version = "0.2-1"
 source = {
   url = "https://github.com/Olivine-Labs/lusty-error-status/archive/v0.2.tar.gz",
   dir = "lusty-error-status-0.2"
