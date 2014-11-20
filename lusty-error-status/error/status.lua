@@ -27,7 +27,7 @@ return {
 
     local code = context.response.status
 
-    local statusCode = status[code] or status[code/100%10]
+    local statusCode = status[code] or status[math.floor(code/100%10)*100]
     for i=1, #prefix do
       context.lusty:publish({unpack(prefix[i])}, context)
     end
@@ -37,7 +37,7 @@ return {
     for i=1, #suffix do
       context.lusty:publish({unpack(suffix[i])}, context)
     end
-    context.output = nil 
+    context.output = nil
   end,
 
   options = {
@@ -50,7 +50,7 @@ return {
       local code = context.response.status
 
       --If xxx (eg 503) set OR x00 (eg, 500) code set then
-      if status[code] or status[code/100%10] then
+      if status[code] or status[math.floor(code/100%10)*100] then
         return true
       end
       return false
